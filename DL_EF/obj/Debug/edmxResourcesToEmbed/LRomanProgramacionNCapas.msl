@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LRomanProgramacionNCapasModelStoreContainer" CdmEntityContainer="LRomanProgramacionNCapasEntities">
+    <EntitySetMapping Name="Aseguradoras">
+      <EntityTypeMapping TypeName="LRomanProgramacionNCapasModel.Aseguradora">
+        <MappingFragment StoreEntitySet="Aseguradora">
+          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+          <ScalarProperty Name="IdAseguradora" ColumnName="IdAseguradora" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rols">
+      <EntityTypeMapping TypeName="LRomanProgramacionNCapasModel.Rol">
+        <MappingFragment StoreEntitySet="Rol">
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdRol" ColumnName="IdRol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Colonias">
+      <EntityTypeMapping TypeName="LRomanProgramacionNCapasModel.Colonia">
+        <MappingFragment StoreEntitySet="Colonia">
+          <ScalarProperty Name="IdMunicipio" ColumnName="IdMunicipio" />
+          <ScalarProperty Name="CodigoPostal" ColumnName="CodigoPostal" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdColonia" ColumnName="IdColonia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Direccions">
+      <EntityTypeMapping TypeName="LRomanProgramacionNCapasModel.Direccion">
+        <MappingFragment StoreEntitySet="Direccion">
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="IdColonia" ColumnName="IdColonia" />
+          <ScalarProperty Name="NumeroExterior" ColumnName="NumeroExterior" />
+          <ScalarProperty Name="NumeroInterior" ColumnName="NumeroInterior" />
+          <ScalarProperty Name="Calle" ColumnName="Calle" />
+          <ScalarProperty Name="IdDireccion" ColumnName="IdDireccion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Empleadoes">
+      <EntityTypeMapping TypeName="LRomanProgramacionNCapasModel.Empleado">
+        <MappingFragment StoreEntitySet="Empleado">
+          <ScalarProperty Name="IdPoliza" ColumnName="IdPoliza" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="Foto" ColumnName="Foto" />
+          <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
+          <ScalarProperty Name="NSS" ColumnName="NSS" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
+          <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="RFC" ColumnName="RFC" />
+          <ScalarProperty Name="NumeroEmpleado" ColumnName="NumeroEmpleado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Empresas">
+      <EntityTypeMapping TypeName="LRomanProgramacionNCapasModel.Empresa">
+        <MappingFragment StoreEntitySet="Empresa">
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+          <ScalarProperty Name="DireccionWeb" ColumnName="DireccionWeb" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Estadoes">
+      <EntityTypeMapping TypeName="LRomanProgramacionNCapasModel.Estado">
+        <MappingFragment StoreEntitySet="Estado">
+          <ScalarProperty Name="IdPais" ColumnName="IdPais" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Municipios">
+      <EntityTypeMapping TypeName="LRomanProgramacionNCapasModel.Municipio">
+        <MappingFragment StoreEntitySet="Municipio">
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdMunicipio" ColumnName="IdMunicipio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pais">
+      <EntityTypeMapping TypeName="LRomanProgramacionNCapasModel.Pai">
+        <MappingFragment StoreEntitySet="Pais">
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdPais" ColumnName="IdPais" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Polizas">
+      <EntityTypeMapping TypeName="LRomanProgramacionNCapasModel.Poliza">
+        <MappingFragment StoreEntitySet="Poliza">
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="NumeroPoliza" ColumnName="NumeroPoliza" />
+          <ScalarProperty Name="IdSubPoliza" ColumnName="IdSubPoliza" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdPoliza" ColumnName="IdPoliza" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubPolizas">
+      <EntityTypeMapping TypeName="LRomanProgramacionNCapasModel.SubPoliza">
+        <MappingFragment StoreEntitySet="SubPoliza">
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdSubPoliza" ColumnName="IdSubPoliza" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="AseguradoraAdd" FunctionName="LRomanProgramacionNCapasModel.Store.AseguradoraAdd" />
+    <FunctionImportMapping FunctionImportName="AseguradoraDelete" FunctionName="LRomanProgramacionNCapasModel.Store.AseguradoraDelete" />
+    <FunctionImportMapping FunctionImportName="AseguradoraGetAll" FunctionName="LRomanProgramacionNCapasModel.Store.AseguradoraGetAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LRomanProgramacionNCapasModel.AseguradoraGetAll_Result">
+          <ScalarProperty Name="IdAseguradora" ColumnName="IdAseguradora" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AseguradoraGetById" FunctionName="LRomanProgramacionNCapasModel.Store.AseguradoraGetById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LRomanProgramacionNCapasModel.AseguradoraGetById_Result">
+          <ScalarProperty Name="IdAseguradora" ColumnName="IdAseguradora" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="AseguradoraUpdate" FunctionName="LRomanProgramacionNCapasModel.Store.AseguradoraUpdate" />
+    <FunctionImportMapping FunctionImportName="ColoniaGetByIdMunicipio" FunctionName="LRomanProgramacionNCapasModel.Store.ColoniaGetByIdMunicipio">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LRomanProgramacionNCapasModel.ColoniaGetByIdMunicipio_Result">
+          <ScalarProperty Name="IdColonia" ColumnName="IdColonia" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="CodigoPostal" ColumnName="CodigoPostal" />
+          <ScalarProperty Name="IdMunicipio" ColumnName="IdMunicipio" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="EmpleadoAdd" FunctionName="LRomanProgramacionNCapasModel.Store.EmpleadoAdd" />
+    <FunctionImportMapping FunctionImportName="EmpleadoAddUpdate" FunctionName="LRomanProgramacionNCapasModel.Store.EmpleadoAddUpdate" />
+    <FunctionImportMapping FunctionImportName="EmpleadoDelete" FunctionName="LRomanProgramacionNCapasModel.Store.EmpleadoDelete" />
+    <FunctionImportMapping FunctionImportName="EmpleadoGetAll" FunctionName="LRomanProgramacionNCapasModel.Store.EmpleadoGetAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LRomanProgramacionNCapasModel.EmpleadoGetAll_Result">
+          <ScalarProperty Name="NumeroEmpleado" ColumnName="NumeroEmpleado" />
+          <ScalarProperty Name="RFC" ColumnName="RFC" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
+          <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="NSS" ColumnName="NSS" />
+          <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
+          <ScalarProperty Name="Foto" ColumnName="Foto" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="EmpresaNombre" ColumnName="EmpresaNombre" />
+          <ScalarProperty Name="IdPoliza" ColumnName="IdPoliza" />
+          <ScalarProperty Name="PolizaNombre" ColumnName="PolizaNombre" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="EmpleadoGetById" FunctionName="LRomanProgramacionNCapasModel.Store.EmpleadoGetById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LRomanProgramacionNCapasModel.EmpleadoGetById_Result">
+          <ScalarProperty Name="NumeroEmpleado" ColumnName="NumeroEmpleado" />
+          <ScalarProperty Name="RFC" ColumnName="RFC" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
+          <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="NSS" ColumnName="NSS" />
+          <ScalarProperty Name="FechaIngreso" ColumnName="FechaIngreso" />
+          <ScalarProperty Name="Foto" ColumnName="Foto" />
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="EmpresaNombre" ColumnName="EmpresaNombre" />
+          <ScalarProperty Name="IdPoliza" ColumnName="IdPoliza" />
+          <ScalarProperty Name="PolizaNombre" ColumnName="PolizaNombre" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="EmpleadoUpdate" FunctionName="LRomanProgramacionNCapasModel.Store.EmpleadoUpdate" />
+    <FunctionImportMapping FunctionImportName="EmpresaAdd" FunctionName="LRomanProgramacionNCapasModel.Store.EmpresaAdd" />
+    <FunctionImportMapping FunctionImportName="EmpresaDelete" FunctionName="LRomanProgramacionNCapasModel.Store.EmpresaDelete" />
+    <FunctionImportMapping FunctionImportName="EmpresaGetAll" FunctionName="LRomanProgramacionNCapasModel.Store.EmpresaGetAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LRomanProgramacionNCapasModel.EmpresaGetAll_Result">
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="DireccionWeb" ColumnName="DireccionWeb" />
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="EmpresaGetById" FunctionName="LRomanProgramacionNCapasModel.Store.EmpresaGetById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LRomanProgramacionNCapasModel.EmpresaGetById_Result">
+          <ScalarProperty Name="IdEmpresa" ColumnName="IdEmpresa" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="DireccionWeb" ColumnName="DireccionWeb" />
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="EmpresaUpdate" FunctionName="LRomanProgramacionNCapasModel.Store.EmpresaUpdate" />
+    <FunctionImportMapping FunctionImportName="EstadoGetByIdPais" FunctionName="LRomanProgramacionNCapasModel.Store.EstadoGetByIdPais">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LRomanProgramacionNCapasModel.EstadoGetByIdPais_Result">
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdPais" ColumnName="IdPais" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="MunicipioGetByIdEstado" FunctionName="LRomanProgramacionNCapasModel.Store.MunicipioGetByIdEstado">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LRomanProgramacionNCapasModel.MunicipioGetByIdEstado_Result">
+          <ScalarProperty Name="IdMunicipio" ColumnName="IdMunicipio" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PaisGetAll" FunctionName="LRomanProgramacionNCapasModel.Store.PaisGetAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LRomanProgramacionNCapasModel.PaisGetAll_Result">
+          <ScalarProperty Name="IdPais" ColumnName="IdPais" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="RolGetAll" FunctionName="LRomanProgramacionNCapasModel.Store.RolGetAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LRomanProgramacionNCapasModel.RolGetAll_Result">
+          <ScalarProperty Name="IdRol" ColumnName="IdRol" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="UsuarioAdd" FunctionName="LRomanProgramacionNCapasModel.Store.UsuarioAdd" />
+    <FunctionImportMapping FunctionImportName="UsuarioDelete" FunctionName="LRomanProgramacionNCapasModel.Store.UsuarioDelete" />
+    <FunctionImportMapping FunctionImportName="UsuarioUpdate" FunctionName="LRomanProgramacionNCapasModel.Store.UsuarioUpdate" />
+    <FunctionImportMapping FunctionImportName="PolizaAdd" FunctionName="LRomanProgramacionNCapasModel.Store.PolizaAdd" />
+    <FunctionImportMapping FunctionImportName="PolizaDelete" FunctionName="LRomanProgramacionNCapasModel.Store.PolizaDelete" />
+    <FunctionImportMapping FunctionImportName="PolizaGetById" FunctionName="LRomanProgramacionNCapasModel.Store.PolizaGetById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LRomanProgramacionNCapasModel.PolizaGetById_Result">
+          <ScalarProperty Name="IdPoliza" ColumnName="IdPoliza" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="SubPolizaId" ColumnName="SubPolizaId" />
+          <ScalarProperty Name="SubPolizaNombre" ColumnName="SubPolizaNombre" />
+          <ScalarProperty Name="NumeroPoliza" ColumnName="NumeroPoliza" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="UsuarioId" ColumnName="UsuarioId" />
+          <ScalarProperty Name="UsuarioUserName" ColumnName="UsuarioUserName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PolizaUpdate" FunctionName="LRomanProgramacionNCapasModel.Store.PolizaUpdate" />
+    <FunctionImportMapping FunctionImportName="PolizaGetAll" FunctionName="LRomanProgramacionNCapasModel.Store.PolizaGetAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LRomanProgramacionNCapasModel.PolizaGetAll_Result">
+          <ScalarProperty Name="IdPoliza" ColumnName="IdPoliza" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="SubPolizaId" ColumnName="SubPolizaId" />
+          <ScalarProperty Name="SubPolizaNombre" ColumnName="SubPolizaNombre" />
+          <ScalarProperty Name="NumeroPoliza" ColumnName="NumeroPoliza" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="FechaModificacion" ColumnName="FechaModificacion" />
+          <ScalarProperty Name="UsuarioId" ColumnName="UsuarioId" />
+          <ScalarProperty Name="UsuarioUserName" ColumnName="UsuarioUserName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SubPolizaGetAll" FunctionName="LRomanProgramacionNCapasModel.Store.SubPolizaGetAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LRomanProgramacionNCapasModel.SubPolizaGetAll_Result">
+          <ScalarProperty Name="IdSubPoliza" ColumnName="IdSubPoliza" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="LRomanProgramacionNCapasModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+          <ScalarProperty Name="Rol" ColumnName="Rol" />
+          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+          <ScalarProperty Name="CURP" ColumnName="CURP" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
+          <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="UsuarioGetAll" FunctionName="LRomanProgramacionNCapasModel.Store.UsuarioGetAll">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LRomanProgramacionNCapasModel.UsuarioGetAll_Result">
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
+          <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="Curp" ColumnName="Curp" />
+          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="IdRol" ColumnName="IdRol" />
+          <ScalarProperty Name="RolNombre" ColumnName="RolNombre" />
+          <ScalarProperty Name="IdDireccion" ColumnName="IdDireccion" />
+          <ScalarProperty Name="DireccionCalle" ColumnName="DireccionCalle" />
+          <ScalarProperty Name="DireccionNumeroInterior" ColumnName="DireccionNumeroInterior" />
+          <ScalarProperty Name="DireccionNumeroExterior" ColumnName="DireccionNumeroExterior" />
+          <ScalarProperty Name="IdColonia" ColumnName="IdColonia" />
+          <ScalarProperty Name="NombreColonia" ColumnName="NombreColonia" />
+          <ScalarProperty Name="CodigoPostal" ColumnName="CodigoPostal" />
+          <ScalarProperty Name="IdMunicipio" ColumnName="IdMunicipio" />
+          <ScalarProperty Name="NombreMunicipio" ColumnName="NombreMunicipio" />
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+          <ScalarProperty Name="NombreEstado" ColumnName="NombreEstado" />
+          <ScalarProperty Name="IdPais" ColumnName="IdPais" />
+          <ScalarProperty Name="NombrePais" ColumnName="NombrePais" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="UsuarioGetById" FunctionName="LRomanProgramacionNCapasModel.Store.UsuarioGetById">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="LRomanProgramacionNCapasModel.UsuarioGetById_Result">
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="ApellidoPaterno" ColumnName="ApellidoPaterno" />
+          <ScalarProperty Name="ApellidoMaterno" ColumnName="ApellidoMaterno" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Sexo" ColumnName="Sexo" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="FechaNacimiento" ColumnName="FechaNacimiento" />
+          <ScalarProperty Name="Curp" ColumnName="Curp" />
+          <ScalarProperty Name="Imagen" ColumnName="Imagen" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="IdRol" ColumnName="IdRol" />
+          <ScalarProperty Name="RolNombre" ColumnName="RolNombre" />
+          <ScalarProperty Name="IdDireccion" ColumnName="IdDireccion" />
+          <ScalarProperty Name="DireccionCalle" ColumnName="DireccionCalle" />
+          <ScalarProperty Name="DireccionNumeroInterior" ColumnName="DireccionNumeroInterior" />
+          <ScalarProperty Name="DireccionNumeroExterior" ColumnName="DireccionNumeroExterior" />
+          <ScalarProperty Name="IdColonia" ColumnName="IdColonia" />
+          <ScalarProperty Name="NombreColonia" ColumnName="NombreColonia" />
+          <ScalarProperty Name="CodigoPostal" ColumnName="CodigoPostal" />
+          <ScalarProperty Name="IdMunicipio" ColumnName="IdMunicipio" />
+          <ScalarProperty Name="NombreMunicipio" ColumnName="NombreMunicipio" />
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+          <ScalarProperty Name="NombreEstado" ColumnName="NombreEstado" />
+          <ScalarProperty Name="IdPais" ColumnName="IdPais" />
+          <ScalarProperty Name="NombrePais" ColumnName="NombrePais" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,502 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LRomanProgramacionNCapasModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Aseguradora">
+    <Key>
+      <PropertyRef Name="IdAseguradora" />
+    </Key>
+    <Property Name="IdAseguradora" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FechaCreacion" Type="datetime" />
+    <Property Name="FechaModificacion" Type="datetime" />
+    <Property Name="IdUsuario" Type="int" />
+    <Property Name="Imagen" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Colonia">
+    <Key>
+      <PropertyRef Name="IdColonia" />
+    </Key>
+    <Property Name="IdColonia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CodigoPostal" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IdMunicipio" Type="int" />
+  </EntityType>
+  <EntityType Name="Direccion">
+    <Key>
+      <PropertyRef Name="IdDireccion" />
+    </Key>
+    <Property Name="IdDireccion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Calle" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="NumeroInterior" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="NumeroExterior" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="IdColonia" Type="int" />
+    <Property Name="IdUsuario" Type="int" />
+  </EntityType>
+  <EntityType Name="Empleado">
+    <Key>
+      <PropertyRef Name="NumeroEmpleado" />
+    </Key>
+    <Property Name="NumeroEmpleado" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="RFC" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ApellidoPaterno" Type="varchar" MaxLength="50" />
+    <Property Name="ApellidoMaterno" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="254" />
+    <Property Name="Telefono" Type="varchar" MaxLength="20" />
+    <Property Name="FechaNacimiento" Type="date" />
+    <Property Name="NSS" Type="varchar" MaxLength="20" />
+    <Property Name="FechaIngreso" Type="date" />
+    <Property Name="Foto" Type="varchar(max)" />
+    <Property Name="IdEmpresa" Type="int" />
+    <Property Name="IdPoliza" Type="int" />
+  </EntityType>
+  <EntityType Name="Empresa">
+    <Key>
+      <PropertyRef Name="IdEmpresa" />
+    </Key>
+    <Property Name="IdEmpresa" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Telefono" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="254" />
+    <Property Name="DireccionWeb" Type="varchar" MaxLength="100" />
+    <Property Name="Logo" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Estado">
+    <Key>
+      <PropertyRef Name="IdEstado" />
+    </Key>
+    <Property Name="IdEstado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IdPais" Type="int" />
+  </EntityType>
+  <EntityType Name="Municipio">
+    <Key>
+      <PropertyRef Name="IdMunicipio" />
+    </Key>
+    <Property Name="IdMunicipio" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IdEstado" Type="int" />
+  </EntityType>
+  <EntityType Name="Pais">
+    <Key>
+      <PropertyRef Name="IdPais" />
+    </Key>
+    <Property Name="IdPais" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Poliza">
+    <Key>
+      <PropertyRef Name="IdPoliza" />
+    </Key>
+    <Property Name="IdPoliza" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="100" />
+    <Property Name="IdSubPoliza" Type="tinyint" />
+    <Property Name="NumeroPoliza" Type="varchar" MaxLength="20" />
+    <Property Name="FechaCreacion" Type="datetime" />
+    <Property Name="FechaModificacion" Type="datetime" />
+    <Property Name="IdUsuario" Type="int" />
+  </EntityType>
+  <EntityType Name="Rol">
+    <Key>
+      <PropertyRef Name="IdRol" />
+    </Key>
+    <Property Name="IdRol" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SubPoliza">
+    <Key>
+      <PropertyRef Name="IdSubPoliza" />
+    </Key>
+    <Property Name="IdSubPoliza" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ApellidoPaterno" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ApellidoMaterno" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="254" Nullable="false" />
+    <Property Name="Sexo" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="Telefono" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Celular" Type="varchar" MaxLength="20" />
+    <Property Name="FechaNacimiento" Type="date" />
+    <Property Name="CURP" Type="varchar" MaxLength="50" />
+    <Property Name="Imagen" Type="varchar(max)" />
+    <Property Name="Rol" Type="int" />
+    <Property Name="Estatus" Type="bit" />
+    <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Asegurado__IdUsu__29572725">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Aseguradora" Type="Self.Aseguradora" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Aseguradora">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Colonia__IdMunic__4222D4EF">
+    <End Role="Municipio" Type="Self.Municipio" Multiplicity="0..1" />
+    <End Role="Colonia" Type="Self.Colonia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Municipio">
+        <PropertyRef Name="IdMunicipio" />
+      </Principal>
+      <Dependent Role="Colonia">
+        <PropertyRef Name="IdMunicipio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Direccion__IdCol__44FF419A">
+    <End Role="Colonia" Type="Self.Colonia" Multiplicity="0..1" />
+    <End Role="Direccion" Type="Self.Direccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Colonia">
+        <PropertyRef Name="IdColonia" />
+      </Principal>
+      <Dependent Role="Direccion">
+        <PropertyRef Name="IdColonia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Direccion__IdUsu__45F365D3">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Direccion" Type="Self.Direccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Direccion">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Empleado__IdEmpr__787EE5A0">
+    <End Role="Empresa" Type="Self.Empresa" Multiplicity="0..1" />
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresa">
+        <PropertyRef Name="IdEmpresa" />
+      </Principal>
+      <Dependent Role="Empleado">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Empleado__IdPoli__797309D9">
+    <End Role="Poliza" Type="Self.Poliza" Multiplicity="0..1" />
+    <End Role="Empleado" Type="Self.Empleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Poliza">
+        <PropertyRef Name="IdPoliza" />
+      </Principal>
+      <Dependent Role="Empleado">
+        <PropertyRef Name="IdPoliza" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Estado__IdPais__3C69FB99">
+    <End Role="Pais" Type="Self.Pais" Multiplicity="0..1" />
+    <End Role="Estado" Type="Self.Estado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pais">
+        <PropertyRef Name="IdPais" />
+      </Principal>
+      <Dependent Role="Estado">
+        <PropertyRef Name="IdPais" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Municipio__IdEst__3F466844">
+    <End Role="Estado" Type="Self.Estado" Multiplicity="0..1" />
+    <End Role="Municipio" Type="Self.Municipio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Municipio">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Poliza__IdSubPol__73BA3083">
+    <End Role="SubPoliza" Type="Self.SubPoliza" Multiplicity="0..1" />
+    <End Role="Poliza" Type="Self.Poliza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubPoliza">
+        <PropertyRef Name="IdSubPoliza" />
+      </Principal>
+      <Dependent Role="Poliza">
+        <PropertyRef Name="IdSubPoliza" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Poliza__IdUsuari__74AE54BC">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <End Role="Poliza" Type="Self.Poliza" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Poliza">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Usuario__Rol__37A5467C">
+    <End Role="Rol" Type="Self.Rol" Multiplicity="0..1" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Rol">
+        <PropertyRef Name="IdRol" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="Rol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="AseguradoraAdd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="IdUsuario" Type="int" Mode="In" />
+    <Parameter Name="Imagen" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="AseguradoraDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdAseguradora" Type="int" Mode="In" />
+  </Function>
+  <Function Name="AseguradoraGetAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="AseguradoraGetById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdAseguradora" Type="int" Mode="In" />
+  </Function>
+  <Function Name="AseguradoraUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdAseguradora" Type="int" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="IdUsuario" Type="int" Mode="In" />
+    <Parameter Name="Imagen" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="ColoniaGetByIdMunicipio" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdMunicipio" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EmpleadoAdd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NumeroEmpleado" Type="varchar" Mode="In" />
+    <Parameter Name="RFC" Type="varchar" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="ApellidoPaterno" Type="varchar" Mode="In" />
+    <Parameter Name="ApellidoMaterno" Type="varchar" Mode="In" />
+    <Parameter Name="Email" Type="varchar" Mode="In" />
+    <Parameter Name="Telefono" Type="varchar" Mode="In" />
+    <Parameter Name="FechaNacimiento" Type="date" Mode="In" />
+    <Parameter Name="NSS" Type="varchar" Mode="In" />
+    <Parameter Name="FechaIngreso" Type="date" Mode="In" />
+    <Parameter Name="Foto" Type="varchar(max)" Mode="In" />
+    <Parameter Name="IdEmpresa" Type="int" Mode="In" />
+    <Parameter Name="IdPoliza" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EmpleadoAddUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NumeroEmpleado" Type="varchar" Mode="In" />
+    <Parameter Name="RFC" Type="varchar" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="ApellidoPaterno" Type="varchar" Mode="In" />
+    <Parameter Name="ApellidoMaterno" Type="varchar" Mode="In" />
+    <Parameter Name="Email" Type="varchar" Mode="In" />
+    <Parameter Name="Telefono" Type="varchar" Mode="In" />
+    <Parameter Name="FechaNacimiento" Type="date" Mode="In" />
+    <Parameter Name="NSS" Type="varchar" Mode="In" />
+    <Parameter Name="FechaIngreso" Type="date" Mode="In" />
+    <Parameter Name="Foto" Type="varchar(max)" Mode="In" />
+    <Parameter Name="IdEmpresa" Type="int" Mode="In" />
+    <Parameter Name="IdPoliza" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EmpleadoDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NumeroEmpleado" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="EmpleadoGetAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="ApellidoPaterno" Type="varchar" Mode="In" />
+    <Parameter Name="IdEmpresa" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EmpleadoGetById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NumeroEmpleado" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="EmpleadoUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="NumeroEmpleado" Type="varchar" Mode="In" />
+    <Parameter Name="RFC" Type="varchar" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="ApellidoPaterno" Type="varchar" Mode="In" />
+    <Parameter Name="ApellidoMaterno" Type="varchar" Mode="In" />
+    <Parameter Name="Email" Type="varchar" Mode="In" />
+    <Parameter Name="Telefono" Type="varchar" Mode="In" />
+    <Parameter Name="FechaNacimiento" Type="date" Mode="In" />
+    <Parameter Name="NSS" Type="varchar" Mode="In" />
+    <Parameter Name="FechaIngreso" Type="date" Mode="In" />
+    <Parameter Name="Foto" Type="varchar(max)" Mode="In" />
+    <Parameter Name="IdEmpresa" Type="int" Mode="In" />
+    <Parameter Name="IdPoliza" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EmpresaAdd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="Telefono" Type="varchar" Mode="In" />
+    <Parameter Name="Email" Type="varchar" Mode="In" />
+    <Parameter Name="DireccionWeb" Type="varchar" Mode="In" />
+    <Parameter Name="Logo" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="EmpresaDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdEmpresa" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EmpresaGetAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="EmpresaGetById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdEmpresa" Type="int" Mode="In" />
+  </Function>
+  <Function Name="EmpresaUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdEmpresa" Type="int" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="Telefono" Type="varchar" Mode="In" />
+    <Parameter Name="Email" Type="varchar" Mode="In" />
+    <Parameter Name="DireccionWeb" Type="varchar" Mode="In" />
+    <Parameter Name="Logo" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="EstadoGetByIdPais" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdPais" Type="int" Mode="In" />
+  </Function>
+  <Function Name="MunicipioGetByIdEstado" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdEstado" Type="int" Mode="In" />
+  </Function>
+  <Function Name="PaisGetAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="PolizaAdd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="IdSubPoliza" Type="int" Mode="In" />
+    <Parameter Name="NumeroPoliza" Type="varchar" Mode="In" />
+    <Parameter Name="IdUsuario" Type="int" Mode="In" />
+  </Function>
+  <Function Name="PolizaDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdPoliza" Type="int" Mode="In" />
+  </Function>
+  <Function Name="PolizaGetAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="PolizaGetById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdPoliza" Type="int" Mode="In" />
+  </Function>
+  <Function Name="PolizaUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdPoliza" Type="int" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="IdSubPoliza" Type="int" Mode="In" />
+    <Parameter Name="NumeroPoliza" Type="varchar" Mode="In" />
+    <Parameter Name="IdUsuario" Type="int" Mode="In" />
+  </Function>
+  <Function Name="RolGetAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SubPolizaGetAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="UsuarioAdd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserName" Type="varchar" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="ApellidoPaterno" Type="varchar" Mode="In" />
+    <Parameter Name="ApellidoMaterno" Type="varchar" Mode="In" />
+    <Parameter Name="Email" Type="varchar" Mode="In" />
+    <Parameter Name="Sexo" Type="char" Mode="In" />
+    <Parameter Name="Telefono" Type="varchar" Mode="In" />
+    <Parameter Name="Celular" Type="varchar" Mode="In" />
+    <Parameter Name="FechaNacimiento" Type="date" Mode="In" />
+    <Parameter Name="Curp" Type="varchar" Mode="In" />
+    <Parameter Name="Imagen" Type="varchar(max)" Mode="In" />
+    <Parameter Name="Rol" Type="int" Mode="In" />
+    <Parameter Name="Password" Type="varchar" Mode="In" />
+    <Parameter Name="Calle" Type="varchar" Mode="In" />
+    <Parameter Name="NumeroInterior" Type="varchar" Mode="In" />
+    <Parameter Name="NumeroExterior" Type="varchar" Mode="In" />
+    <Parameter Name="IdColonia" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UsuarioDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdDireccion" Type="int" Mode="In" />
+    <Parameter Name="IdUsuario" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UsuarioGetAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="ApellidoPaterno" Type="varchar" Mode="In" />
+    <Parameter Name="UserName" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="UsuarioGetById" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdUsuario" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UsuarioUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IdUsuario" Type="int" Mode="In" />
+    <Parameter Name="UserName" Type="varchar" Mode="In" />
+    <Parameter Name="Nombre" Type="varchar" Mode="In" />
+    <Parameter Name="ApellidoPaterno" Type="varchar" Mode="In" />
+    <Parameter Name="ApellidoMaterno" Type="varchar" Mode="In" />
+    <Parameter Name="Email" Type="varchar" Mode="In" />
+    <Parameter Name="Sexo" Type="char" Mode="In" />
+    <Parameter Name="Telefono" Type="varchar" Mode="In" />
+    <Parameter Name="Celular" Type="varchar" Mode="In" />
+    <Parameter Name="FechaNacimiento" Type="date" Mode="In" />
+    <Parameter Name="Curp" Type="varchar" Mode="In" />
+    <Parameter Name="Imagen" Type="varchar(max)" Mode="In" />
+    <Parameter Name="Rol" Type="int" Mode="In" />
+    <Parameter Name="Estatus" Type="bit" Mode="In" />
+    <Parameter Name="Password" Type="varchar" Mode="In" />
+    <Parameter Name="Calle" Type="varchar" Mode="In" />
+    <Parameter Name="NumeroInterior" Type="varchar" Mode="In" />
+    <Parameter Name="NumeroExterior" Type="varchar" Mode="In" />
+    <Parameter Name="IdColonia" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="LRomanProgramacionNCapasModelStoreContainer">
+    <EntitySet Name="Aseguradora" EntityType="Self.Aseguradora" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Colonia" EntityType="Self.Colonia" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Direccion" EntityType="Self.Direccion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Empleado" EntityType="Self.Empleado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Empresa" EntityType="Self.Empresa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Estado" EntityType="Self.Estado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Municipio" EntityType="Self.Municipio" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Pais" EntityType="Self.Pais" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Poliza" EntityType="Self.Poliza" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Rol" EntityType="Self.Rol" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SubPoliza" EntityType="Self.SubPoliza" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Asegurado__IdUsu__29572725" Association="Self.FK__Asegurado__IdUsu__29572725">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Aseguradora" EntitySet="Aseguradora" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Colonia__IdMunic__4222D4EF" Association="Self.FK__Colonia__IdMunic__4222D4EF">
+      <End Role="Municipio" EntitySet="Municipio" />
+      <End Role="Colonia" EntitySet="Colonia" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Direccion__IdCol__44FF419A" Association="Self.FK__Direccion__IdCol__44FF419A">
+      <End Role="Colonia" EntitySet="Colonia" />
+      <End Role="Direccion" EntitySet="Direccion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Direccion__IdUsu__45F365D3" Association="Self.FK__Direccion__IdUsu__45F365D3">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Direccion" EntitySet="Direccion" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Empleado__IdEmpr__787EE5A0" Association="Self.FK__Empleado__IdEmpr__787EE5A0">
+      <End Role="Empresa" EntitySet="Empresa" />
+      <End Role="Empleado" EntitySet="Empleado" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Empleado__IdPoli__797309D9" Association="Self.FK__Empleado__IdPoli__797309D9">
+      <End Role="Poliza" EntitySet="Poliza" />
+      <End Role="Empleado" EntitySet="Empleado" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Estado__IdPais__3C69FB99" Association="Self.FK__Estado__IdPais__3C69FB99">
+      <End Role="Pais" EntitySet="Pais" />
+      <End Role="Estado" EntitySet="Estado" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Municipio__IdEst__3F466844" Association="Self.FK__Municipio__IdEst__3F466844">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Municipio" EntitySet="Municipio" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Poliza__IdSubPol__73BA3083" Association="Self.FK__Poliza__IdSubPol__73BA3083">
+      <End Role="SubPoliza" EntitySet="SubPoliza" />
+      <End Role="Poliza" EntitySet="Poliza" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Poliza__IdUsuari__74AE54BC" Association="Self.FK__Poliza__IdUsuari__74AE54BC">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Poliza" EntitySet="Poliza" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Usuario__Rol__37A5467C" Association="Self.FK__Usuario__Rol__37A5467C">
+      <End Role="Rol" EntitySet="Rol" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

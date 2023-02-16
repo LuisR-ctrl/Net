@@ -1,0 +1,67 @@
+﻿@model ML.Poliza
+@{
+    ViewBag.Title = "GetAll";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>PÓLIZA</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h5>Seleccione + para registrar una nueva póliza.</h5>
+            <hr />
+        </div>
+    </div>
+
+</div>
+
+
+<div class="row">
+    <div class="col-md-9"></div>
+    <div class="col-md-3 text-right">
+        <!--TEXTO / METODO/ CONTROLADOR-->
+        @Html.ActionLink("+", "Form", "Poliza", htmlAttributes: new { @class = "btn btn-success " })
+    </div>
+</div>
+<div>
+    <p class="pt-md-5 bg-warning"></p>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <table class="table table-bordered table-responsive text-center">
+            <thead class="thead-dark">
+                <tr>
+                    <td>Editar</td>
+                    <td>Nombre</td>
+                    <td>SubPoliza</td>
+                    <td>NumeroSubPoliza</td>
+                    <td>Fecha Creación</td>
+                    <td>Fecha de Modificación</td>
+                    <td>UserName</td>
+                    <td>Eliminar</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (ML.Poliza poliza in Model.Polizas)
+                {
+                    <tr>
+                        <td><a class="btn btn-warning glyphicon glyphicon-edit" href="@Url.Action("Form", "Poliza", new { IdPoliza = poliza.IdPoliza })"></a></td>
+                        <td>@poliza.Nombre</td>
+                        <td>@poliza.SubPoliza.Nombre</td>
+                        <td>@poliza.NumeroPoliza</td>
+                        <td>@poliza.FechaCreacion</td>
+                        <td>@poliza.FechaModificacion</td>
+                        <td>@poliza.Usuario.UserName</td>
+                        <td><a class="btn btn-danger glyphicon glyphicon-trash" href="@Url.Action("Delete", "Poliza", new { IdPoliza = poliza.IdPoliza })" onclick="return confirm('¿Estas seguro que deseas eliminar este registro?');"></a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

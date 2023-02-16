@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e12165be5e33400f88a9449a915365f2" Name="Diagram1" ZoomLevel="98">
+        <EntityTypeShape EntityType="LRomanProgramacionNCapasModel.Aseguradora" Width="1.5" PointX="3" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LRomanProgramacionNCapasModel.Rol" Width="1.5" PointX="0.75" PointY="4.875" />
+        <EntityTypeShape EntityType="LRomanProgramacionNCapasModel.Colonia" Width="1.5" PointX="3" PointY="11" />
+        <EntityTypeShape EntityType="LRomanProgramacionNCapasModel.Direccion" Width="1.5" PointX="5.25" PointY="5.75" />
+        <EntityTypeShape EntityType="LRomanProgramacionNCapasModel.Empleado" Width="1.5" PointX="10.5" PointY="5.125" />
+        <EntityTypeShape EntityType="LRomanProgramacionNCapasModel.Empresa" Width="1.5" PointX="8.25" PointY="1.875" />
+        <EntityTypeShape EntityType="LRomanProgramacionNCapasModel.Estado" Width="1.5" PointX="0.75" PointY="8.125" />
+        <EntityTypeShape EntityType="LRomanProgramacionNCapasModel.Municipio" Width="1.5" PointX="0.75" PointY="11.125" />
+        <EntityTypeShape EntityType="LRomanProgramacionNCapasModel.Pai" Width="1.5" PointX="0.75" PointY="2.25" />
+        <EntityTypeShape EntityType="LRomanProgramacionNCapasModel.Poliza" Width="1.5" PointX="8.25" PointY="5.625" />
+        <EntityTypeShape EntityType="LRomanProgramacionNCapasModel.SubPoliza" Width="1.5" PointX="6" PointY="3.25" />
+        <AssociationConnector Association="LRomanProgramacionNCapasModel.FK__Colonia__IdMunic__4222D4EF" />
+        <AssociationConnector Association="LRomanProgramacionNCapasModel.FK__Direccion__IdCol__44FF419A" />
+        <AssociationConnector Association="LRomanProgramacionNCapasModel.FK__Empleado__IdEmpr__787EE5A0" />
+        <AssociationConnector Association="LRomanProgramacionNCapasModel.FK__Empleado__IdPoli__797309D9" />
+        <AssociationConnector Association="LRomanProgramacionNCapasModel.FK__Estado__IdPais__3C69FB99" />
+        <AssociationConnector Association="LRomanProgramacionNCapasModel.FK__Municipio__IdEst__3F466844" />
+        <AssociationConnector Association="LRomanProgramacionNCapasModel.FK__Poliza__IdSubPol__73BA3083" />
+        <EntityTypeShape EntityType="LRomanProgramacionNCapasModel.Usuario" Width="1.5" PointX="3" PointY="5.375" />
+        <AssociationConnector Association="LRomanProgramacionNCapasModel.FK__Asegurado__IdUsu__29572725" />
+        <AssociationConnector Association="LRomanProgramacionNCapasModel.FK__Direccion__IdUsu__45F365D3" />
+        <AssociationConnector Association="LRomanProgramacionNCapasModel.FK__Poliza__IdUsuari__74AE54BC" />
+        <AssociationConnector Association="LRomanProgramacionNCapasModel.FK__Usuario__Rol__37A5467C" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

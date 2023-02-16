@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="e980b0b2-33bb-4f11-87a0-8586539a8984" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:59814/Poliza.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="Poliza.xsd" MetadataType="Schema" ID="3c9ef2fd-ce41-426e-9fe9-f7887f3d7943" SourceId="1" SourceUrl="http://localhost:59814/Poliza.svc?xsd=xsd0" />
+    <MetadataFile FileName="Poliza1.xsd" MetadataType="Schema" ID="68074454-dae5-443b-b100-3916518bab8a" SourceId="1" SourceUrl="http://localhost:59814/Poliza.svc?xsd=xsd1" />
+    <MetadataFile FileName="Poliza.disco" MetadataType="Disco" ID="ffec0d44-0cd1-4dd8-a05b-ec2f62ea7874" SourceId="1" SourceUrl="http://localhost:59814/Poliza.svc?disco" />
+    <MetadataFile FileName="Poliza2.xsd" MetadataType="Schema" ID="170047ab-e064-48f0-af95-5266ab1d4380" SourceId="1" SourceUrl="http://localhost:59814/Poliza.svc?xsd=xsd3" />
+    <MetadataFile FileName="Poliza3.xsd" MetadataType="Schema" ID="2e2bc74a-7431-4064-9a16-cb81eb06e7a5" SourceId="1" SourceUrl="http://localhost:59814/Poliza.svc?xsd=xsd2" />
+    <MetadataFile FileName="Poliza4.xsd" MetadataType="Schema" ID="d0388284-9cef-448f-b2cc-119754659301" SourceId="1" SourceUrl="http://localhost:59814/Poliza.svc?xsd=xsd4" />
+    <MetadataFile FileName="Poliza.wsdl" MetadataType="Wsdl" ID="7ae116eb-2744-42e5-aef6-cee38420b922" SourceId="1" SourceUrl="http://localhost:59814/Poliza.svc?wsdl" />
+    <MetadataFile FileName="Poliza5.xsd" MetadataType="Schema" ID="756591a2-434e-452b-8c25-3241a22fcf77" SourceId="1" SourceUrl="http://localhost:59814/Poliza.svc?xsd=xsd5" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,130 @@
+﻿@model ML.Usuario
+@{
+    ViewBag.Title = "Form";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Form</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            @using (Html.BeginForm("Form", "Usuario", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+            <div class="form-horizontal">
+
+                <div class="form-group">
+                    @Html.TextBoxFor(model => model.IdUsuario, new { @class = "form-control hidden", @readonly = true })
+                    @Html.ValidationMessageFor(model => model.IdUsuario)
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.UserName, new { @class = "control-label col-md-2"})
+                    <div class="col-md-3">
+                        @Html.TextBoxFor(model => model.UserName, new { @class = "form-control", @placeholder = "eg: AuroraT" })
+                        @Html.ValidationMessageFor(model => model.UserName)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Nombre, new { @class = "control-label col-md-2"})
+                    <div class="col-md-3">
+                        @Html.TextBoxFor(model => model.Nombre, new { @class = "form-control", @placeholder = "eg: Aurora" })
+                        @Html.ValidationMessageFor(model => model.Nombre)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ApellidoPaterno, new { @class = "control-label col-md-2"})
+                    <div class="col-md-3">
+                        @Html.TextBoxFor(model => model.ApellidoPaterno, new { @class = "form-control", @placeholder = "eg: Torres" })
+                        @Html.ValidationMessageFor(model => model.ApellidoPaterno)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ApellidoMaterno, new { @class = "control-label col-md-2"})
+                    <div class="col-md-3">
+                        @Html.TextBoxFor(model => model.ApellidoMaterno, new { @class = "form-control", @placeholder = "eg: Torres" })
+                        @Html.ValidationMessageFor(model => model.ApellidoMaterno)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Email, new { @class = "control-label col-md-2"})
+                    <div class="col-md-3">
+                        @Html.TextBoxFor(model => model.Email, new { @class = "form-control", @placeholder = "eg: aurora1@gmail.com" })
+                        @Html.ValidationMessageFor(model => model.Email)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Sexo, new { @class = "control-label col-md-2"})
+                    <div class="col-md-3">
+                        @Html.TextBoxFor(model => model.Sexo, new { @class = "form-control", @placeholder = "eg: F" })
+                        @Html.ValidationMessageFor(model => model.Sexo)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Telefono, new { @class = "control-label col-md-2"})
+                    <div class="col-md-3">
+                        @Html.TextBoxFor(model => model.Telefono, new { @class = "form-control", @placeholder = "eg: 56781254" })
+                        @Html.ValidationMessageFor(model => model.Telefono)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Celular, new { @class = "control-label col-md-2"})
+                    <div class="col-md-3">
+                        @Html.TextBoxFor(model => model.Celular, new { @class = "form-control", @placeholder = "eg: 5512341256" })
+                        @Html.ValidationMessageFor(model => model.Celular)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.FechaNacimiento, new { @class = "control-label col-md-2"})
+                    <div class="col-md-3">
+                        @Html.TextBoxFor(model => model.FechaNacimiento, new { @class = "form-control", @placeholder = "eg: 10-29-2000" })
+                        @Html.ValidationMessageFor(model => model.FechaNacimiento)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Curp, new { @class = "control-label col-md-2"})
+                    <div class="col-md-3">
+                        @Html.TextBoxFor(model => model.Curp, new { @class = "form-control", @placeholder = "eg: TOTA001029MDFKDJ12" })
+                        @Html.ValidationMessageFor(model => model.Curp)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Rol, new { @class = "control-label col-md-2" })
+                    <div class="col-md-3">
+
+                        @Html.DropDownListFor(model => model.Rol.IdRol, new SelectList(Model.Rol.Roles, "IdRol", "Nombre"), "Selecciona una opcion", new { @class = "form-control" })
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-1">
+                        <button type="submit" value="" class="btn btn-success ">
+                            <span class="glyphicon glyphicon-ok"></span>
+                        </button>
+                        @*<input type="submit" value="" class="btn btn-success glyphicon glyphicon-ok" />*@
+                    </div>
+                    <div class="col-md-1">
+                        @Html.ActionLink(" ", "GetAll", "Usuario", htmlAttributes: new { @class = "btn btn-danger glyphicon glyphicon-ban-circle" })
+                    </div>
+                </div>
+            </div>
+
+            }
+        </div>
+    </div>
+    @*<div class="row">
+        <div class="col-md-2">
+            @Html.ActionLink(" ", "GetAll", "Usuario", htmlAttributes: new { @class = "btn btn-danger glyphicon glyphicon-ban-circle" })
+        </div>
+    </div>*@
+</div>
